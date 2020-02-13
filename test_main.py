@@ -4,6 +4,7 @@ Tests for jwt flask app.
 import os
 import json
 import pytest
+from typing import List
 
 import main
 
@@ -31,7 +32,7 @@ def test_health(client):
 def test_auth(client):
     body = {'email': EMAIL,
             'password': PASSWORD}
-    response = client.post('/auth', 
+    response = client.post('/auth',
                            data=json.dumps(body),
                            content_type='application/json')
 
