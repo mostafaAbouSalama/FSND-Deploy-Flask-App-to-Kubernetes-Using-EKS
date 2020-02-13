@@ -5,11 +5,6 @@ data:
     username: build
     groups:
       - system:masters
-    - groups:
-      - system:bootstrappers
-      - system:nodes
-      rolearn: arn:aws:iam::363587345741:role/eksctl-simple-jwt-api-nodegroup-n-NodeInstanceRole-YDGUFF23Q59C
-      username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     []
 kind: ConfigMap
